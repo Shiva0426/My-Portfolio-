@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-**GitHub Pages**: Deploy for free at `https://Shiva0426.github.io`
+**GitHub Pages**: Deploy for free at `https://Shiva0426.github.io/My-Portfolio-/`
 
 ---
 
@@ -68,7 +68,7 @@ portfolio/
 ### Step 1: Create Repository
 ```bash
 # Go to github.com/new
-# Repository name: Shiva0426.github.io
+# Repository name: My-Portfolio-
 # Set to Public
 # Don't initialize with README (we already have one)
 ```
@@ -80,7 +80,7 @@ git init
 git add .
 git commit -m "Initial portfolio deploy"
 git branch -M main
-git remote add origin https://github.com/Shiva0426/Shiva0426.github.io.git
+git remote add origin https://github.com/Shiva0426/My-Portfolio-.git
 git push -u origin main
 ```
 
@@ -90,7 +90,7 @@ git push -u origin main
 3. Branch: **main** / **root**
 4. Click **Save**
 
-🎉 Your portfolio will be live at: **https://Shiva0426.github.io**
+🎉 Your portfolio will be live at: **https://Shiva0426.github.io/My-Portfolio-/**
 
 ### Optional: Custom Domain (Low-Cost)
 | Provider   | Domain    | Cost          |
