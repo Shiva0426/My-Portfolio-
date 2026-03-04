@@ -1,0 +1,64 @@
+# 🎮 Portfolio Transformation — Walkthrough
+
+## What Changed
+
+Transformed the portfolio from a generic **Data Analytics & Technology Consultant** profile to a focused **Data Engineer & Data Analyst** portfolio, keeping the same gaming/cyberpunk theme.
+
+### Files Modified
+- [index.html](file:///c:/Users/KSD%20MUDHIRAJ/PERSONAL%20DATA/CV/portfolio/index.html) — All content sections updated
+- [script.js](file:///c:/Users/KSD%20MUDHIRAJ/PERSONAL%20DATA/CV/portfolio/script.js) — Typewriter bio & loading messages
+- [README.md](file:///c:/Users/KSD%20MUDHIRAJ/PERSONAL%20DATA/CV/portfolio/README.md) — **NEW** — Professional README
+
+---
+
+## Key Content Changes
+
+| Section | Before | After |
+|---------|--------|-------|
+| **Title** | Data Analytics & Technology Consultant | Data Engineer & Data Analyst |
+| **Tech Stack** | Power BI, SQL, Python, Data Governance, ETL, Azure | SQL, Python, JavaScript, Apache Spark, Kafka, Airflow |
+| **Skills** | 4 trees (Analytics, Vis, Cloud, Automation) | 4 trees (Data Engineering, Data Analytics, Programming, Cloud & Big Data) |
+| **Projects** | 2 cards | 4 cards (Streaming Pipeline, SQL Engine, Banking Dashboard, ETL Framework) |
+
+### New Skill Trees
+1. **🛠️ Data Engineering** — SQL (Advanced), Python (PySpark), Spark, Kafka, Airflow, ETL/ELT
+2. **📊 Data Analytics** — Power BI, Tableau, Excel, Stats, Data Modelling
+3. **💻 Programming** — Python, SQL, JavaScript, Bash, Git
+4. **☁️ Cloud & Big Data** — AWS, Azure, Databricks, Snowflake, Docker
+
+### New Projects
+1. **Real-Time Streaming Data Pipeline** — Kafka → Spark → PostgreSQL
+2. **E-Commerce SQL Analytics Engine** — 50+ advanced queries, stored procs, JS ER visualiser
+3. **Banking Risk Analytics Dashboard** — ETL + Power BI
+4. **Automated ETL Orchestration Framework** — Python + Airflow + Docker
+
+---
+
+## Screenshots
+
+### Hero Section
+![Hero showing Data Engineer & Data Analyst title with SQL, Python, JavaScript, Spark, Kafka, Airflow](C:/Users/KSD MUDHIRAJ/.gemini/antigravity/brain/a151d11f-02ee-4eaa-b54a-8cdfe5f136ce/hero_section_1772620618207.png)
+
+### About Section  
+![Terminal-style bio with updated Data Engineering intro](C:/Users/KSD MUDHIRAJ/.gemini/antigravity/brain/a151d11f-02ee-4eaa-b54a-8cdfe5f136ce/top_after_scroll_800_1772620819432.png)
+
+### Education & Contact
+![Education card with Data Engineering certifications and contact section](C:/Users/KSD MUDHIRAJ/.gemini/antigravity/brain/a151d11f-02ee-4eaa-b54a-8cdfe5f136ce/skills_section_top_1772620798821.png)
+
+---
+
+## Browser Recording
+
+![Portfolio browsing session](C:/Users/KSD MUDHIRAJ/.gemini/antigravity/brain/a151d11f-02ee-4eaa-b54a-8cdfe5f136ce/portfolio_live_check_1772620588966.webp)
+
+## Verification
+
+✅ Hero section shows "Data Engineer & Data Analyst" with correct tech stack  
+✅ About section typewriter bio updated with DE/DA focus  
+✅ Skills section has 4 new skill trees with 21 total skills  
+✅ Experience reframed for ETL, SQL, Python, data pipeline work  
+✅ Projects expanded to 4 data engineering projects  
+✅ Education updated with Data Engineering certifications  
+✅ Contact section unchanged  
+✅ Gaming/cyberpunk theme fully preserved  
+✅ README.md created with full documentation

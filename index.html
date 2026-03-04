@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shiva Darshan Koukuntla — Aspiring Data Engineer & Data Analyst</title>
+  <meta name="description"
+    content="Portfolio of Shiva Darshan Koukuntla — Aspiring Data Engineer & Data Analyst. SQL, Python, JavaScript, Power BI, ETL, Data Analytics." />
+  <meta name="keywords"
+    content="Fresher, Data Engineer, Data Analyst, SQL, Python, JavaScript, Power BI, ETL, Portfolio, Entry Level" />
+  <meta name="author" content="Shiva Darshan Koukuntla" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Shiva Darshan Koukuntla — Aspiring Data Engineer & Data Analyst" />
+  <meta property="og:description"
+    content="Aspiring Data Engineer & Data Analyst | B.Tech CS Fresher | Gaming-themed interactive portfolio" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>" />
+</head>
+
+<body>
+
+  <!-- Matrix Rain Background -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-title">LOADING PORTFOLIO...</div>
+    <div class="loading-bar-container">
+      <div class="loading-bar" id="loading-bar"></div>
+    </div>
+    <div class="loading-text" id="loading-text">Initializing data pipelines...</div>
+  </div>
+
+  <!-- Achievement Toast -->
+  <div class="achievement-toast" id="achievement-toast">
+    <span class="trophy">🏆</span>
+    <div class="achievement-info">
+      <div class="achievement-label">★ ACHIEVEMENT UNLOCKED ★</div>
+      <div class="achievement-name" id="achievement-name">First Visit!</div>
+    </div>
+  </div>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav" id="top-nav">
+    <div class="top-nav-logo">SDKs_PORTFOLIO</div>
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+    <ul class="top-nav-links" id="nav-links">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="sound-toggle" id="sound-toggle" title="Toggle sound effects">🔇 SFX</button>
+  </nav>
+
+  <!-- Side Navigation Dots -->
+  <nav class="nav-sidebar" id="nav-sidebar">
+    <div class="nav-dot active" data-target="hero" data-label="HOME"></div>
+    <div class="nav-dot" data-target="about" data-label="ABOUT"></div>
+    <div class="nav-dot" data-target="skills" data-label="SKILLS"></div>
+    <div class="nav-dot" data-target="experience" data-label="EXPERIENCE"></div>
+    <div class="nav-dot" data-target="projects" data-label="PROJECTS"></div>
+    <div class="nav-dot" data-target="education" data-label="EDUCATION"></div>
+    <div class="nav-dot" data-target="contact" data-label="CONTACT"></div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- HERO SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-subtitle-top">// Welcome to my world</div>
+      <h1 class="hero-name glitch" data-text="SHIVA DARSHAN KOUKUNTLA">SHIVA DARSHAN KOUKUNTLA</h1>
+      <p class="hero-title">Aspiring Data Engineer & Data Analyst</p>
+      <p class="hero-stack">
+        <span>SQL</span> | <span>Python</span> | <span>JavaScript</span> | <span>Power BI</span> | <span>ETL</span> |
+        <span>Excel</span>
+      </p>
+      <a href="#about" class="press-start">▶ PRESS START ◀</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- ABOUT SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="about">
+    <div class="reveal">
+      <div class="section-header">
+        <span>// ABOUT_ME</span>
+        <span class="level-badge">PLAYER PROFILE</span>
+      </div>
+      <div class="section-divider"></div>
+
+      <div class="about-container">
+        <div class="avatar-wrapper" id="avatar-wrapper">
+          <div class="avatar-frame">
+            <span class="avatar-icon">👨‍💻</span>
+          </div>
+          <div class="avatar-click-counter" id="avatar-counter"></div>
+        </div>
+
+        <div class="terminal-bio">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">shiva@portfolio ~ $ cat about.txt</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+            <p class="output" id="typewriter-target"></p>
+            <br />
+            <p><span class="prompt">$</span> <span class="cmd">cat location.txt</span></p>
+            <p class="output">📍 Hyderabad, India</p>
+            <br />
+            <p><span class="prompt">$</span> <span class="cmd">cat status.txt</span></p>
+            <p class="output">🟢 Open to opportunities | Immediate availability | Ready to learn & grow</p>
+            <br />
+            <p><span class="prompt">$</span> <span class="cmd">cat interests.txt</span></p>
+            <p class="output">📊 Data Analytics · 🛠️ Data Engineering · 💻 Web Development · ☁️ Cloud Technologies · 🏏
+              Kabaddi</p>
+            <br />
+            <p><span class="prompt">$</span> <span class="terminal-cursor"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SKILLS SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="reveal">
+      <div class="section-header">
+        <span>// SKILL_TREE</span>
+        <span class="level-badge">STATS</span>
+      </div>
+      <div class="section-divider"></div>
+
+      <div class="skills-grid">
+
+        <!-- Skill Tree: Core Data Skills -->
+        <div class="skill-tree">
+          <div class="skill-tree-title"><span class="icon">🗄️</span> CORE DATA SKILLS</div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">SQL (Joins, Subqueries, Group By, CTEs)</span>
+              <span class="skill-xp">XP 750/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill cyan" data-width="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Python (Pandas, NumPy, Basics)</span>
+              <span class="skill-xp">XP 700/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill cyan" data-width="70"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Excel (VLOOKUP, Pivot Tables, Charts)</span>
+              <span class="skill-xp">XP 800/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill cyan" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Data Cleaning & Preprocessing</span>
+              <span class="skill-xp">XP 650/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill cyan" data-width="65"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">ETL Concepts & Data Pipelines</span>
+              <span class="skill-xp">XP 550/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill cyan" data-width="55"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Tree: Programming -->
+        <div class="skill-tree">
+          <div class="skill-tree-title"><span class="icon">💻</span> PROGRAMMING</div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Python (Core, OOP, Scripting)</span>
+              <span class="skill-xp">XP 720/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill green" data-width="72"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">SQL (MySQL, PostgreSQL)</span>
+              <span class="skill-xp">XP 750/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill green" data-width="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">JavaScript (ES6 Basics, DOM)</span>
+              <span class="skill-xp">XP 550/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill green" data-width="55"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">HTML & CSS</span>
+              <span class="skill-xp">XP 650/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill green" data-width="65"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Git & GitHub</span>
+              <span class="skill-xp">XP 600/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill green" data-width="60"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Tree: Visualisation & Reporting -->
+        <div class="skill-tree">
+          <div class="skill-tree-title"><span class="icon">📊</span> VISUALISATION & REPORTING</div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Power BI (Dashboards, Basic DAX)</span>
+              <span class="skill-xp">XP 650/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill magenta" data-width="65"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Tableau (Basic Visualisations)</span>
+              <span class="skill-xp">XP 500/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill magenta" data-width="50"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Matplotlib & Seaborn</span>
+              <span class="skill-xp">XP 600/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill magenta" data-width="60"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Excel Charts & Reporting</span>
+              <span class="skill-xp">XP 700/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill magenta" data-width="70"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Tree: Learning & Growing -->
+        <div class="skill-tree">
+          <div class="skill-tree-title"><span class="icon">🌱</span> LEARNING & GROWING</div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">AWS (Cloud Fundamentals)</span>
+              <span class="skill-xp">XP 400/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill orange" data-width="40"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Azure (AZ-900 Studying)</span>
+              <span class="skill-xp">XP 350/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill orange" data-width="35"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Apache Spark (Exploring)</span>
+              <span class="skill-xp">XP 300/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill orange" data-width="30"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Docker (Basics)</span>
+              <span class="skill-xp">XP 300/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill orange" data-width="30"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Databricks (Awareness)</span>
+              <span class="skill-xp">XP 250/1000</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill orange" data-width="25"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- EXPERIENCE SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="experience">
+    <div class="reveal">
+      <div class="section-header">
+        <span>// QUEST_LOG</span>
+        <span class="level-badge">EXPERIENCE</span>
+      </div>
+      <div class="section-divider"></div>
+
+      <div class="experience-timeline">
+
+        <!-- Level 2 -->
+        <div class="exp-card">
+          <div class="exp-level">⬢ LEVEL 2 — CURRENT QUEST</div>
+          <div class="exp-title">Data Analyst (Intern)</div>
+          <div class="exp-company">Labmentix</div>
+          <div class="exp-location-date">📍 Bengaluru, Karnataka &nbsp;|&nbsp; Jul 2025 – Present</div>
+          <ul class="exp-quests">
+            <li>Built Power BI dashboards to monitor airline operational data quality and delay patterns, improving
+              compliance team visibility.</li>
+            <li>Validated and cleaned datasets using Python (Pandas) and SQL, ensuring accuracy and consistency across
+              multiple data sources.</li>
+            <li>Wrote SQL queries to extract and analyze data, supporting audit-ready reporting pipelines.</li>
+            <li>Assisted in establishing data documentation practices including data lineage tracking.</li>
+            <li>Collaborated with team members to translate business requirements into structured data quality rules.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Level 1 -->
+        <div class="exp-card">
+          <div class="exp-level">⬢ LEVEL 1 — COMPLETED</div>
+          <div class="exp-title">Data Science & Analytics Intern</div>
+          <div class="exp-company">Zidio Developers</div>
+          <div class="exp-location-date">📍 Bengaluru, Karnataka &nbsp;|&nbsp; May 2024 – Aug 2025</div>
+          <ul class="exp-quests">
+            <li>Designed SQL queries for demand-supply reporting and trend visualisation across multi-city ride-request
+              datasets.</li>
+            <li>Cleaned and standardised raw data using Python (Pandas), implementing basic data quality checks.</li>
+            <li>Built simple ETL workflows using Python and SQL to transform raw data into structured reports.</li>
+            <li>Created data visualisations using Matplotlib and Seaborn to present findings to stakeholders.</li>
+            <li>Gained hands-on experience with the complete data lifecycle — from ingestion to reporting.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PROJECTS SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="reveal">
+      <div class="section-header">
+        <span>// ACHIEVEMENTS</span>
+        <span class="level-badge">PROJECTS</span>
+      </div>
+      <div class="section-divider"></div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: E-Commerce SQL Analytics -->
+        <div class="project-card">
+          <div class="project-card-inner">
+            <div class="project-front">
+              <div>
+                <div class="project-achievement">★ ACHIEVEMENT CARD ★</div>
+                <div class="project-name">
+                  <a href="https://github.com/Shiva0426/E-Commerce-Database" target="_blank" rel="noopener noreferrer"
+                    style="color: inherit; text-decoration: none;">
+                    E-Commerce SQL Analytics Project 🔗
+                  </a>
+                </div>
+                <p class="project-desc">
+                  Built a MySQL database with 15+ tables, wrote analytical queries using joins, subqueries, and CTEs.
+                  Created stored procedures for customer segmentation and sales reporting.
+                </p>
+              </div>
+              <div>
+                <div class="project-tools">
+                  <span class="project-tool-tag">SQL</span>
+                  <span class="project-tool-tag">MySQL</span>
+                  <span class="project-tool-tag">Python</span>
+                  <span class="project-tool-tag">JavaScript</span>
+                </div>
+                <p class="flip-hint">[ HOVER TO FLIP ]</p>
+              </div>
+            </div>
+            <div class="project-back">
+              <div class="project-back-title">QUEST DETAILS</div>
+              <ul class="project-back-details">
+                <li>Designed a normalised database schema with 15+ tables for an e-commerce platform.</li>
+                <li>Wrote 30+ SQL queries using CTEs, subqueries, and aggregate functions for sales analysis.</li>
+                <li>Created stored procedures for RFM customer segmentation and automated reporting.</li>
+                <li>Built a JavaScript-based ER diagram visualiser for documentation.</li>
+                <li>Tools: MySQL, Python, JavaScript, Git</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Banking Risk Dashboard -->
+        <div class="project-card">
+          <div class="project-card-inner">
+            <div class="project-front">
+              <div>
+                <div class="project-achievement">★ ACHIEVEMENT CARD ★</div>
+                <div class="project-name">Banking Risk Analytics Dashboard</div>
+                <p class="project-desc">
+                  Conducted exploratory data analysis on loan portfolio datasets using Python (Pandas). Built Power BI
+                  dashboards to visualise credit risk KPIs and default trends.
+                </p>
+              </div>
+              <div>
+                <div class="project-tools">
+                  <span class="project-tool-tag">Python</span>
+                  <span class="project-tool-tag">Pandas</span>
+                  <span class="project-tool-tag">SQL</span>
+                  <span class="project-tool-tag">Power BI</span>
+                </div>
+                <p class="flip-hint">[ HOVER TO FLIP ]</p>
+              </div>
+            </div>
+            <div class="project-back">
+              <div class="project-back-title">QUEST DETAILS</div>
+              <ul class="project-back-details">
+                <li>Cleaned and preprocessed loan data using Python (Pandas, NumPy).</li>
+                <li>Performed EDA to identify risk patterns and default drivers.</li>
+                <li>Created Power BI dashboards showing credit risk KPIs and portfolio health metrics.</li>
+                <li>Tools: Python, Pandas, SQL, Power BI, Excel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Python Data Automation Script -->
+        <div class="project-card">
+          <div class="project-card-inner">
+            <div class="project-front">
+              <div>
+                <div class="project-achievement">★ ACHIEVEMENT CARD ★</div>
+                <div class="project-name">Python Data Automation Scripts</div>
+                <p class="project-desc">
+                  Developed Python scripts to automate repetitive data tasks — file processing, data cleaning, report
+                  generation — and used scheduling for daily execution.
+                </p>
+              </div>
+              <div>
+                <div class="project-tools">
+                  <span class="project-tool-tag">Python</span>
+                  <span class="project-tool-tag">Pandas</span>
+                  <span class="project-tool-tag">SQL</span>
+                  <span class="project-tool-tag">Excel</span>
+                </div>
+                <p class="flip-hint">[ HOVER TO FLIP ]</p>
+              </div>
+            </div>
+            <div class="project-back">
+              <div class="project-back-title">QUEST DETAILS</div>
+              <ul class="project-back-details">
+                <li>Built Python scripts to read CSV/Excel files, clean data, and generate summary reports.</li>
+                <li>Used Pandas for data transformation and SQLAlchemy for database interactions.</li>
+                <li>Automated daily report generation, reducing manual effort.</li>
+                <li>Tools: Python, Pandas, SQLAlchemy, Excel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- EDUCATION SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="education">
+    <div class="reveal">
+      <div class="section-header">
+        <span>// ORIGIN_STORY</span>
+        <span class="level-badge">EDUCATION</span>
+      </div>
+      <div class="section-divider"></div>
+
+      <div class="education-card">
+        <div class="edu-origin-label">◆ CHARACTER ORIGIN ◆</div>
+        <div class="edu-degree">B.Tech — Computer Science & Engineering (Data Science)</div>
+        <div class="edu-college">KG Reddy College of Engineering & Technology, JNTUH — Hyderabad</div>
+        <div class="edu-year">2020 – 2024</div>
+        <ul class="edu-details">
+          <li>Specialised in data science, database systems, and software engineering with a focus on practical data
+            skills.</li>
+          <li>Completed coursework in SQL, Python, Data Structures & Algorithms, Machine Learning, and Statistics.</li>
+          <li>Led Kabaddi team to championship victory as Captain, demonstrating leadership and teamwork under pressure.
+          </li>
+          <li>Self-learning: Microsoft Azure Data Fundamentals (AZ-900), Power BI, and advanced SQL techniques.</li>
+          <li>Eager to learn: Apache Spark, Airflow, and cloud data engineering tools through projects and
+            certifications.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CONTACT SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="reveal">
+      <div class="section-header">
+        <span>// CONNECT</span>
+        <span class="level-badge">CONTACT</span>
+      </div>
+      <div class="section-divider"></div>
+
+      <div class="contact-terminal">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">shiva@portfolio ~ $ cat contact.txt</span>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:shivadarshan9999@gmail.com" class="contact-link" id="contact-email">
+            <span class="link-icon">📧</span>
+            <div>
+              <span class="link-label">EMAIL</span>
+              <span class="link-value">shivadarshan9999@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+918179041773" class="contact-link" id="contact-phone">
+            <span class="link-icon">📱</span>
+            <div>
+              <span class="link-label">PHONE</span>
+              <span class="link-value">+91 81790 41773</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/Shiva0426" target="_blank" rel="noopener noreferrer" class="contact-link"
+            id="contact-linkedin">
+            <span class="link-icon">💼</span>
+            <div>
+              <span class="link-label">LINKEDIN</span>
+              <span class="link-value">linkedin.com/in/Shiva0426</span>
+            </div>
+          </a>
+          <a href="https://github.com/Shiva0426" target="_blank" rel="noopener noreferrer" class="contact-link"
+            id="contact-github">
+            <span class="link-icon">🐙</span>
+            <div>
+              <span class="link-label">GITHUB</span>
+              <span class="link-value">github.com/Shiva0426</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>CRAFTED WITH <span class="heart">♥</span> BY SHIVA DARSHAN KOUKUNTLA &nbsp;|&nbsp; 2025</p>
+    <p style="margin-top: 8px; color: #333355;">TIP: Try the Konami Code ↑↑↓↓←→←→BA 🎮</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
