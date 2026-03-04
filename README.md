@@ -92,15 +92,33 @@ git push -u origin main
 
 🎉 Your portfolio will be live at: **https://Shiva0426.github.io/My-Portfolio-/**
 
-### Optional: Custom Domain (Low-Cost)
-| Provider   | Domain    | Cost          |
-|------------|-----------|---------------|
-| Namecheap  | `.tech`   | ~₹70/year     |
-| Namecheap  | `.me`     | ~₹150/year    |
-| GoDaddy    | `.in`     | ~₹99/year     |
-| Hostinger  | `.online` | ~₹49/year     |
+---
 
-To connect a custom domain, add a `CNAME` file with your domain name and configure DNS.
+## 🌐 Setting Up a Custom Domain (Hostinger `.online`)
+
+If you've purchased a `.online` domain from Hostinger (e.g., `shivadarshan.online`), connect it to your GitHub Pages portfolio with these steps:
+
+### 1. Configure Hostinger DNS
+1. Log in to your Hostinger account and click **Manage** next to your `.online` domain.
+2. On the left menu, select **DNS / Nameservers**.
+3. Under **Manage DNS records**, add these **4 A Records**:
+   - Type: `A`, Name: `@`, Points to: `185.199.108.153`
+   - Type: `A`, Name: `@`, Points to: `185.199.109.153`
+   - Type: `A`, Name: `@`, Points to: `185.199.110.153`
+   - Type: `A`, Name: `@`, Points to: `185.199.111.153`
+4. Provide a CNAME record so `www` works too:
+   - Type: `CNAME`, Name: `www`, Points to: `Shiva0426.github.io`
+
+### 2. Add Custom Domain in GitHub
+1. Go to your GitHub repository: [My-Portfolio-](https://github.com/Shiva0426/My-Portfolio-)
+2. Click on the ⚙️ **Settings** tab.
+3. On the left sidebar, click **Pages**.
+4. Scroll down to the **Custom domain** section.
+5. In the box, type your new domain (e.g., `shivadarshan.online`).
+6. Click **Save**.
+7. Wait a few minutes (GitHub will check the DNS records). Once it says "DNS check successful," check the box that says **Enforce HTTPS**.
+
+> **Note:** DNS changes can take up to 24 hours to propagate across the entire internet, though usually with Hostinger it takes less than an hour.
 
 ---
 
