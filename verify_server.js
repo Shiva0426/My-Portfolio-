@@ -1,7 +1,5 @@
 const http = require('http');
-
 console.log("Verifying local portfolio server...");
-
 http.get('http://localhost:3000/', (res) => {
   console.log(`Status Code: ${res.statusCode}`);
   let data = '';
