@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koukuntla Shiva Darshan — Data Engineer & Data Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Koukuntla Shiva Darshan, a Data Engineer & Data Analyst specializing in SQL, Python, ETL, Power BI, and Cloud Data Pipelines. Explore interactive pipelines and analytics." />
+  <meta name="keywords" content="Data Engineer, Data Analyst, SQL, Python, Power BI, ETL, AWS, Azure, Portfolio, Hyderabad, India" />
+  <meta name="author" content="Koukuntla Shiva Darshan" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Koukuntla Shiva Darshan — Data Engineer & Data Analyst" />
+  <meta property="og:description" content="Professional portfolio showcasing interactive ETL pipelines, custom SQL playgrounds, and data analytics dashboards." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ksdmudiraj.in/" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
+</head>
+<body>
+
+  <!-- Background Cyber Grid & Glows -->
+  <div class="cyber-grid"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- Header & Navigation -->
+  <header class="top-header" id="top-header">
+    <div class="header-container">
+      <a href="#hero" class="logo">
+        <span class="logo-accent">&lt;</span>KSD<span class="logo-accent">.</span>DATA<span class="logo-accent"> /&gt;</span>
+      </a>
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#dashboard" class="nav-link">Live Pipeline</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-action">
+        <a href="https://drive.google.com/file/d/1cshLt15JW816uaiCVzZV6-NplMUFuGNp/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-right: 10px;">Download CV</a>
+        <a href="mailto:shivadarshan9999@gmail.com" class="btn btn-primary">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO SECTION -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-container">
+            <span class="badge badge-pulse">🟢 Open to Opportunities</span>
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Shiva Darshan</span>
+          </h1>
+          <h2 class="hero-subtitle">Data Engineer & Data Analyst</h2>
+          <p class="hero-description">
+            I specialize in designing robust ETL pipelines, optimizing SQL databases, and building interactive dashboards that turn raw data logs into high-impact business intelligence.
+          </p>
+          <div class="hero-actions">
+            <a href="#dashboard" class="btn btn-primary">Try Live Pipeline</a>
+            <a href="https://drive.google.com/file/d/1cshLt15JW816uaiCVzZV6-NplMUFuGNp/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download CV</a>
+            <a href="#projects" class="btn btn-outline">View Work</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">Internships</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">15+</span>
+              <span class="stat-label">DB Tables Normalized</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">30+</span>
+              <span class="stat-label">SQL Queries Written</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-card">
+            <div class="card-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="card-title">pipeline_orchestrator.py</span>
+            </div>
+            <div class="card-body">
+              <pre><code class="language-python"><span class="pl-k">import</span> pandas <span class="pl-k">as</span> pd
+<span class="pl-k">from</span> sqlalchemy <span class="pl-k">import</span> create_engine
+
+<span class="pl-c"># Extract data from sources</span>
+df = pd.read_csv(<span class="pl-s">"flight_delays_raw.csv"</span>)
+
+<span class="pl-c"># Clean and transform flights data</span>
+df[<span class="pl-s">'delay_minutes'</span>] = df[<span class="pl-s">'delay_minutes'</span>].fillna(<span class="pl-c1">0</span>)
+summary = df.groupby(<span class="pl-s">'airline'</span>).agg({
+    <span class="pl-s">'delay_minutes'</span>: <span class="pl-s">'mean'</span>,
+    <span class="pl-s">'flight_id'</span>: <span class="pl-s">'count'</span>
+}).rename(columns={<span class="pl-s">'flight_id'</span>: <span class="pl-s">'total_flights'</span>})
+
+<span class="pl-c"># Load into PostgreSQL warehouse</span>
+engine = create_engine(<span class="pl-s">'postgresql://admin@db/wh'</span>)
+summary.to_sql(<span class="pl-s">'airline_kpis'</span>, engine, if_exists=<span class="pl-s">'replace'</span>)
+<span class="pl-en">print</span>(<span class="pl-s">"ETL pipeline executed successfully! ✅"</span>)</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- ABOUT SECTION -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="about" class="about-section scroll-reveal">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">// About Me</h2>
+          <span class="section-subtitle">profile_card.json</span>
+        </div>
+        <div class="about-grid">
+          <div class="about-bio-terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">shiva@data-core:~$ whoami</span>
+            </div>
+            <div class="terminal-body" id="bio-terminal">
+              <p class="terminal-line"><span class="terminal-prompt">$</span> cat summary.txt</p>
+              <p class="terminal-output" id="typewriter-output"></p>
+              <div class="terminal-interactive-options">
+                <button class="terminal-btn active" data-cmd="location">location.sh</button>
+                <button class="terminal-btn" data-cmd="interests">interests.log</button>
+                <button class="terminal-btn" data-cmd="education">origin_story.txt</button>
+                <button class="terminal-btn" data-cmd="certifications">goals.json</button>
+              </div>
+              <div class="terminal-interactive-content" id="terminal-content">
+                <!-- Filled dynamically by script.js -->
+              </div>
+            </div>
+          </div>
+          <div class="about-card-profile">
+            <div class="avatar-frame">
+              <div class="avatar-circle">
+                <span class="avatar-text">SD</span>
+              </div>
+            </div>
+            <div class="profile-details">
+              <h3>Koukuntla Shiva Darshan</h3>
+              <p class="role">Data Engineer & Analyst</p>
+              <div class="profile-info-list">
+                <div class="info-item">
+                  <span class="info-label">Current:</span>
+                  <span class="info-val">Data Analyst Intern at Labmentix</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Degree:</span>
+                  <span class="info-val">B.Tech CS (Data Science)</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Location:</span>
+                  <span class="info-val">Hyderabad, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SKILLS SECTION -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="skills" class="skills-section scroll-reveal">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">// Skill Tree</h2>
+          <span class="section-subtitle">system_capabilities.conf</span>
+        </div>
+        <div class="skills-grid">
+          
+          <!-- Category 1: Core Data Engineering -->
+          <div class="skill-card">
+            <div class="skill-icon-wrapper cyan">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+            </div>
+            <h3>Data Engineering & ETL</h3>
+            <p class="skill-card-desc">Designing data extraction, cleaning workflows, schema design, and load operations.</p>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-info"><span class="name">ETL Pipelines</span><span class="percentage">75%</span></div>
+                <div class="progress-bar"><div class="progress progress-cyan" data-width="75"></div></div>
+              </li>
+              <li>
+                <div class="skill-info"><span class="name">Data Cleaning & Pandas</span><span class="percentage">80%</span></div>
+                <div class="progress-bar"><div class="progress progress-cyan" data-width="80"></div></div>
+              </li>
+              <li>
+                <div class="skill-info"><span class="name">Database Schema Design</span><span class="percentage">70%</span></div>
+                <div class="progress-bar"><div class="progress progress-cyan" data-width="70"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 2: Databases & SQL -->
+          <div class="skill-card">
+            <div class="skill-icon-wrapper purple">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+            </div>
+            <h3>Databases & Queries</h3>
+            <p class="skill-card-desc">Writing highly performant queries, analytics aggregates, CTEs, window functions, and stored procedures.</p>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-info"><span class="name">SQL (MySQL, PostgreSQL)</span><span class="percentage">85%</span></div>
+                <div class="progress-bar"><div class="progress progress-purple" data-width="85"></div></div>
+              </li>
+              <li>
+                <div class="skill-info"><span class="name">Complex Joins & Aggregates</span><span class="percentage">80%</span></div>
+                <div class="progress-bar"><div class="progress progress-purple" data-width="80"></div></div>
+              </li>
+              <li>
+                <div class="skill-info"><span class="name">CTEs & Subqueries</span><span class="percentage">80%</span></div>
+                <div class="progress-bar"><div class="progress progress-purple" data-width="80"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 3: Analytics & Visualisation -->
+          <div class="skill-card">
+            <div class="skill-icon-wrapper emerald">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path></svg>
+            </div>
+            <h3>Analytics & BI</h3>
+            <p class="skill-card-desc">Translating complex datasets into beautiful, interactive, and actionable dashboards for stakeholders.</p>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-info"><span class="name">Power BI (Basic DAX, Reports)</span><span class="percentage">75%</span></div>
+                <div class="progress-bar"><div class="progress progress-emerald" data-width="75"></div></div>
+              </li>
+              <li>
+                <div class="skill-info"><span class="name">Matplotlib & Seaborn</span><span class="percentage">70%</span></div>
+                <div class="progress-bar"><div class="progress progress-emerald" data-width="70"></div></div>
+              </li>
+              <li>
+                <div class="skill-info"><span class="name">Excel (Pivots, Formulas)</span><span class="percentage">85%</span></div>
+                <div class="progress-bar"><div class="progress progress-emerald" data-width="85"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 4: Cloud & Tools -->
+          <div class="skill-card">
+            <div class="skill-icon-wrapper orange">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+            </div>
+            <h3>Cloud & Frameworks</h3>
+            <p class="skill-card-desc">Studying and deploying solutions on cloud platforms, version control, and automation scheduling.</p>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-info"><span class="name">Git & GitHub</span><span class="percentage">75%</span></div>
+                <div class="progress-bar"><div class="progress progress-orange" data-width="75"></div></div>
+              </li>
+              <li>
+                <div class="skill-info"><span class="name">Cloud Fundamentals (AWS/Azure)</span><span class="percentage">50%</span></div>
+                <div class="progress-bar"><div class="progress progress-orange" data-width="50"></div></div>
+              </li>
+              <li>
+                <div class="skill-info"><span class="name">Apache Spark & Airflow</span><span class="percentage">40%</span></div>
+                <div class="progress-bar"><div class="progress progress-orange" data-width="40"></div></div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- LIVE DATA DASHBOARD / ETL PIPELINE SIMULATOR -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="dashboard" class="dashboard-section scroll-reveal">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">// Live Pipeline & SQL Playground</h2>
+          <span class="section-subtitle">realtime_etl_monitor.exe</span>
+        </div>
+        
+        <p class="dashboard-intro">
+          As a Data Engineer, I build pipelines that run silently in the background. Here is a live simulation of a mock pipeline processing airline delays and transactions, alongside a sandbox to run SQL queries on the output.
+        </p>
+
+        <div class="dashboard-grid">
+          <!-- Column 1: Pipeline Flow & Logger -->
+          <div class="pipeline-card">
+            <div class="card-header">
+              <span class="status-indicator live"></span> Live Pipeline Monitor
+            </div>
+            <div class="pipeline-flow">
+              <div class="flow-node active" id="node-ingest">
+                <span class="node-icon">📥</span>
+                <span class="node-label">Ingest CSV</span>
+              </div>
+              <div class="flow-arrow" id="arrow-1"><span></span></div>
+              <div class="flow-node" id="node-transform">
+                <span class="node-icon">⚙️</span>
+                <span class="node-label">Pandas Clean</span>
+              </div>
+              <div class="flow-arrow" id="arrow-2"><span></span></div>
+              <div class="flow-node" id="node-load">
+                <span class="node-icon">📤</span>
+                <span class="node-label">Postgres LOAD</span>
+              </div>
+            </div>
+            
+            <div class="pipeline-metrics">
+              <div class="metric-box">
+                <span class="metric-val" id="metric-rate">1,250</span>
+                <span class="metric-lbl">rows/sec</span>
+              </div>
+              <div class="metric-box">
+                <span class="metric-val" id="metric-success">100%</span>
+                <span class="metric-lbl">success rate</span>
+              </div>
+              <div class="metric-box">
+                <span class="metric-val" id="metric-latency">42ms</span>
+                <span class="metric-lbl">latency</span>
+              </div>
+            </div>
+
+            <div class="pipeline-logger">
+              <div class="logger-header">System Event Logs</div>
+              <div class="logger-body" id="log-console">
+                <div class="log-line info">[INFO] System initialized. Ready for ingestion.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: SQL Playground -->
+          <div class="sql-card">
+            <div class="card-header">
+              SQL Playground Sandbox
+            </div>
+            <div class="sql-editor">
+              <div class="sql-instructions">Choose a preset analytical query to run against the database:</div>
+              <div class="query-selector-wrapper">
+                <select id="query-selector" aria-label="Select SQL Query Preset">
+                  <option value="flights_summary">SELECT airline, COUNT(*), AVG(delay_minutes) FROM flights GROUP BY airline</option>
+                  <option value="high_delays">SELECT flight_id, airline, delay_minutes FROM flights WHERE delay_minutes > 45</option>
+                  <option value="route_delays">SELECT origin, destination, AVG(delay_minutes) FROM flights GROUP BY origin, destination</option>
+                  <option value="schema_info">EXPLAIN SELECT * FROM flights</option>
+                </select>
+                <button class="btn btn-primary" id="btn-run-query">Run Query</button>
+              </div>
+              
+              <div class="sql-terminal">
+                <div class="terminal-prompt-line">
+                  <span class="sql-prompt">postgres=#</span>
+                  <span class="sql-input-display" id="sql-input-preview">SELECT airline, COUNT(*), AVG(delay_minutes) FROM flights GROUP BY airline;</span>
+                </div>
+              </div>
+
+              <div class="sql-results">
+                <div class="results-header">Query Results <span class="rows-count" id="results-count">(3 rows returned)</span></div>
+                <div class="table-wrapper">
+                  <table id="sql-results-table">
+                    <thead>
+                      <!-- Populated dynamically -->
+                    </thead>
+                    <tbody>
+                      <!-- Populated dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- EXPERIENCE SECTION -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="experience" class="experience-section scroll-reveal">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">// Work Experience & Education</h2>
+          <span class="section-subtitle">career_history.db</span>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline line -->
+          <div class="timeline-line"></div>
+
+          <!-- Item 1: Labmentix -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Jul 2025 – Present</span>
+              <h3 class="timeline-job-title">Data Analyst (Intern)</h3>
+              <h4 class="timeline-company">Labmentix <span class="timeline-loc">📍 Bengaluru, Karnataka (Remote)</span></h4>
+              <ul class="timeline-details">
+                <li>Built comprehensive Power BI dashboards to track airline operational metrics, delay patterns, and compliance rules.</li>
+                <li>Cleaned, imputed, and verified datasets using Python (Pandas) and SQL queries, ensuring production data quality.</li>
+                <li>Maintained and updated documentation of key data pipelines, supporting data lineage logs.</li>
+                <li>Mapped business analytics requests into structured SQL queries and data validation scripts.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">SQL</span>
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Data Quality</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Zidio Developers -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">May 2024 – Aug 2025</span>
+              <h3 class="timeline-job-title">Data Science & Analytics Intern</h3>
+              <h4 class="timeline-company">Zidio Developers <span class="timeline-loc">📍 Bengaluru, Karnataka (Remote)</span></h4>
+              <ul class="timeline-details">
+                <li>Designed analytical SQL queries to evaluate demand-supply balances in ride-share request datasets.</li>
+                <li>Built automated Python scripts using Pandas for data staging, cleaning, and simple ETL file loading.</li>
+                <li>Visualized key patterns (e.g. peak hours, high-density areas) using Matplotlib and Seaborn for business teams.</li>
+                <li>Gained hands-on knowledge of end-to-end data pipelines from CSV files to database staging.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Matplotlib</span>
+                <span class="tag">ETL Staging</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: B.Tech -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2020 – 2024</span>
+              <h3 class="timeline-job-title">B.Tech in Computer Science & Engineering (Data Science)</h3>
+              <h4 class="timeline-company">KG Reddy College of Engineering & Technology, JNTUH <span class="timeline-loc">📍 Hyderabad, India</span></h4>
+              <ul class="timeline-details">
+                <li>Specialized in data engineering, cloud concepts, structures & algorithms, and databases.</li>
+                <li>Acquired foundation in database structures, SQL, data structures, and python scripting.</li>
+                <li>Captain of the College Kabaddi Team, leading the squad to tournament victories (honing leadership and collaboration under pressure).</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">CS Core</span>
+                <span class="tag">Databases</span>
+                <span class="tag">Python Core</span>
+                <span class="tag">Data Structures</span>
+                <span class="tag">Leadership</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PROJECTS SECTION -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="projects" class="projects-section scroll-reveal">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">// Featured Projects</h2>
+          <span class="section-subtitle">data_repositories.log</span>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-image-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" fill="none">
+                <rect width="400" height="200" fill="%231a1a2e"/>
+                <path d="M50 150 L120 80 L200 120 L300 50 L350 90" stroke="%2300f0ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="50" cy="150" r="5" fill="%23ff00e5"/>
+                <circle cx="120" cy="80" r="5" fill="%23ff00e5"/>
+                <circle cx="200" cy="120" r="5" fill="%23ff00e5"/>
+                <circle cx="300" cy="50" r="5" fill="%23ff00e5"/>
+                <circle cx="350" cy="90" r="5" fill="%23ff00e5"/>
+                <text x="20" y="40" fill="%238888aa" font-family="monospace" font-size="12">SQL Schema: normalized platform</text>
+              </svg>
+            </div>
+            <div class="project-content">
+              <h3>E-Commerce SQL Analytics</h3>
+              <p>Designed a fully normalized MySQL database schema featuring 15+ tables. Developed 30+ complex queries incorporating windows, CTEs, and aggregation rules, alongside stored procedures for RFM user segmentation.</p>
+              <div class="project-tags">
+                <span class="tag">MySQL</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Schema Design</span>
+                <span class="tag">Stored Procs</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shiva0426/E-Commerce-Database" class="project-link" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  Repository ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-image-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" fill="none">
+                <rect width="400" height="200" fill="%231a1a2e"/>
+                <rect x="50" y="80" width="60" height="70" fill="%23b400ff" opacity="0.8"/>
+                <rect x="130" y="40" width="60" height="110" fill="%23b400ff" opacity="0.8"/>
+                <rect x="210" y="90" width="60" height="60" fill="%23b400ff" opacity="0.8"/>
+                <rect x="290" y="60" width="60" height="90" fill="%23b400ff" opacity="0.8"/>
+                <text x="20" y="30" fill="%238888aa" font-family="monospace" font-size="12">Power BI Default Risk EDA</text>
+              </svg>
+            </div>
+            <div class="project-content">
+              <h3>Banking Credit Risk Analytics</h3>
+              <p>Cleaned and analyzed massive loan applicant portfolios using Python (Pandas/NumPy) to identify drivers of default. Built responsive Power BI dashboards to display risk indicators, KPIs, and demographic insights.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Risk Analysis</span>
+              </div>
+              <div class="project-links">
+                <span class="project-link disabled">
+                  Internal Project
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-image-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" fill="none">
+                <rect width="400" height="200" fill="%231a1a2e"/>
+                <line x1="50" y1="100" x2="350" y2="100" stroke="%2339ff14" stroke-width="2" stroke-dasharray="5 5"/>
+                <circle cx="100" cy="100" r="15" fill="%231a1a2e" stroke="%2339ff14" stroke-width="2"/>
+                <circle cx="200" cy="100" r="15" fill="%231a1a2e" stroke="%2339ff14" stroke-width="2"/>
+                <circle cx="300" cy="100" r="15" fill="%231a1a2e" stroke="%2339ff14" stroke-width="2"/>
+                <text x="92" y="104" fill="%2339ff14" font-family="monospace" font-size="12">R</text>
+                <text x="192" y="104" fill="%2339ff14" font-family="monospace" font-size="12">T</text>
+                <text x="292" y="104" fill="%2339ff14" font-family="monospace" font-size="12">L</text>
+                <text x="20" y="30" fill="%238888aa" font-family="monospace" font-size="12">Python Automation Scheduler</text>
+              </svg>
+            </div>
+            <div class="project-content">
+              <h3>ETL File Processing Automation</h3>
+              <p>Designed lightweight Python automated systems that clean CSV input feeds daily, perform schema checking, and use SQLALchemy to ingest records into an analytics database, triggering HTML alerts on validation failures.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQLAlchemy</span>
+                <span class="tag">Data Quality</span>
+                <span class="tag">Automation</span>
+              </div>
+              <div class="project-links">
+                <span class="project-link disabled">
+                  Internal Scripts
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CONTACT SECTION -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="contact" class="contact-section scroll-reveal">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">// Connect</h2>
+          <span class="section-subtitle">socket_connections.info</span>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-intro">
+            <h3>Let's Collaborate</h3>
+            <p>I'm currently looking for full-time Data Engineer, Associate Data Engineer, or Data Analyst roles. If you have a role available, or simply want to chat about SQL optimization, ETL setups, or Kabaddi strategies — reach out!</p>
+          </div>
+          
+          <div class="contact-grid">
+            <div class="contact-item" id="copy-email" data-clipboard="shivadarshan9999@gmail.com">
+              <div class="contact-icon">📧</div>
+              <div class="contact-info">
+                <span class="contact-label">Email</span>
+                <span class="contact-val">shivadarshan9999@gmail.com</span>
+              </div>
+              <button class="btn-copy" aria-label="Copy email">Copy</button>
+            </div>
+
+            <div class="contact-item" id="copy-phone" data-clipboard="+918179041773">
+              <div class="contact-icon">📱</div>
+              <div class="contact-info">
+                <span class="contact-label">Phone</span>
+                <span class="contact-val">+91 81790 41773</span>
+              </div>
+              <button class="btn-copy" aria-label="Copy phone number">Copy</button>
+            </div>
+
+            <a href="https://www.linkedin.com/in/shiva4826/" target="_blank" rel="noopener noreferrer" class="contact-item link-item">
+              <div class="contact-icon">💼</div>
+              <div class="contact-info">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-val">linkedin.com/in/shiva4826/</span>
+              </div>
+              <span class="arrow-indicator">↗</span>
+            </a>
+
+            <a href="https://github.com/Shiva0426" target="_blank" rel="noopener noreferrer" class="contact-item link-item">
+              <div class="contact-icon">🐙</div>
+              <div class="contact-info">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-val">github.com/Shiva0426</span>
+              </div>
+              <span class="arrow-indicator">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <p>© 2026 Koukuntla Shiva Darshan. Built as a professional data developer portfolio.</p>
+      <p class="footer-note">Designed with robust metrics & clean queries.</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
